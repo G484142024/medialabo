@@ -2,26 +2,36 @@ p {
 	color: navy;
 }
 
-p.info {
-	font-size: 10pt;
+.info {
+	font-size: small;
+	background-color: #dfdfdf ;
 }
 
 h1 {
-	background-color: #7f7fcf;
+	background-color: none;
 }
 
 h2 {
-	border: solid 1px black;
-	margin: 5px;
+	color: #3f3faf;
+	font-family: cursive;
+	background: linear-gradient(0.25turn, white, #ffefaf);
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 200px;
 }
 
 div#zentai > div {
-	margin-left: 5px;
+	padding : 5px;
 	background-color: #ffefaf;
+	margin: 5px;
+}
+.pic{
+	float:right;
+}
+.shadow {
+	color: white;
+	text-shadow: navy 1px 0 10px; ;
 }
