@@ -4,6 +4,7 @@ for (let c of cs) {
 	c.addEventListener('click', get_text);
 }
 
+
 // イベントハンドラ
 function get_text(event) {
 	let div = event.target;	// クリックされた要素
