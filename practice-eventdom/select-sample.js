@@ -1,6 +1,7 @@
 let b = document.querySelector('button#btn');
 b.addEventListener('click', showSelectResult);
 
+
 function showSelectResult() {
 	let s = document.querySelector('select#santaro');
 	let idx = s.selectedIndex;	// idx 番目の option が選択された

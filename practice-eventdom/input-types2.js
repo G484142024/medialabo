@@ -3,6 +3,7 @@ for (let b of bs) {
 	b.addEventListener('click', showValue);
 }
 
+
 function showValue(event) {
 	let be = event.target;
 	let name = be.getAttribute('name');
