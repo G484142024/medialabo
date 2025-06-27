@@ -1,6 +1,6 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
-function print(data) {
+function print() {
   console.log(data.name);
   console.log(data.coord.lon);
   console.log(data.coord.lat);
@@ -9,8 +9,16 @@ function print(data) {
   console.log(data.main.humidity);
   console.log(data.wind.speed);
   console.log(data.wind.deg);
+
+  id = document.querySelector('input[name=kensaku');
+  console.log('市名ID：' + id.value );
 }
 
+let city = document.querySelector('button#print');
+city.addEventListener('click', print);
+
+
+ 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 

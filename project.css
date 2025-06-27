@@ -79,14 +79,18 @@ table, th, td {
   }
   
   input {
-    padding: 8px 12px;
+    padding: 7px 12px;
     font-size: 16px;
     border: 2px solid #3AAFA9;
     border-radius: 5px;
-    outline: none;
-    transition: 0.3s;
     border-color: #2C3E50;
     box-shadow: 0 0 5px #3AAFA9;
+  }
+
+  button {
+    padding: 7px 12px;
+    font-size: 16px;
+    border-radius: 5px;
   }
   
   
