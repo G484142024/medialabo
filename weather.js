@@ -7,22 +7,64 @@ function print() {
   console.log(data.main.temp_min);
   console.log(data.main.temp_max);
   console.log(data.main.humidity);
+  console.log(data.weather[0].description );
   console.log(data.wind.speed);
   console.log(data.wind.deg);
 
-  id = document.querySelector('input[name=kensaku');
+  id = document.querySelector('input[name="kensaku"]');
   console.log('市名ID：' + id.value );
 }
-
-let city = document.querySelector('button#print');
-city.addEventListener('click', print);
-
-
+let b = document.querySelector('button#print');
+b.addEventListener('click', print);
  
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
+  let div = document.querySelector('div#result');
+  let h2 = document.createElement('h2');
+  h2.textContent = data.name;
+  div.insertAdjacentElement('beforeend', h2 );
+
+  let p = document.createElement('p');
+  p.textContent = '今日は' + data.weather[0].description + 'ですよ！';
+  div.insertAdjacentElement('beforeend', p);
+
+
+  let table = document.createElement('table');
+  table.setAttribute('border', '1');
+
+  
+  let trHead = document.createElement('tr');
+  let heads = ['経度', '緯度', '最低気温', '最高気温', '湿度', '風速', '風向'];
+  for(let text of heads) {
+    let th = document.createElement('th');
+    th.textContent = text;
+    trHead.insertAdjacentElement('beforeend', th);
+  };
+  table.insertAdjacentElement('beforeend', trHead);
+
+  
+  let trData = document.createElement('tr');
+  let vals = [
+    data.coord.lon,
+    data.coord.lat,
+    data.main.temp_min,
+    data.main.temp_max,
+    data.main.humidity,
+    data.wind.speed,
+    data.wind.deg
+  ];
+  for(let val of vals) {
+    let td = document.createElement('td');
+    td.textContent = val;
+    trData.insertAdjacentElement('beforeend', td);
+  };
+  table.insertAdjacentElement('beforeend', trData);
+
+  div.insertAdjacentElement('beforeend', table);
+
 }
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
@@ -99,4 +141,9 @@ let data = {
   "name": "北京市",
   "cod": 200
 };
+
+
+
+
+ 
 
